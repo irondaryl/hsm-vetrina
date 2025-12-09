@@ -1,0 +1,20 @@
+.app-shell {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #141927 0, #05060a 55%);
+  color: var(--hsm-text);
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1;
+  padding: 3rem 1.5rem 2rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .app-main {
+    padding: 2rem 1.25rem 1.5rem;
+  }
+}

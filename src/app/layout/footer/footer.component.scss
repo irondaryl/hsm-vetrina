@@ -1,0 +1,64 @@
+.hsm-footer {
+  border-top: 1px solid var(--hsm-border);
+  background: #05060a;
+
+  &__inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 1.25rem;
+    font-size: 0.8rem;
+    color: var(--hsm-text-muted);
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    margin-bottom: 1rem;
+  }
+
+  &__name {
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--hsm-text);
+  }
+
+  &__tagline {
+    font-size: 0.75rem;
+  }
+
+  &__columns {
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 1.25rem;
+
+    h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--hsm-text);
+      margin-bottom: 0.4rem;
+    }
+
+    p {
+      margin: 0.1rem 0;
+    }
+  }
+
+  &__legal {
+    font-size: 0.75rem;
+    opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    &__inner {
+      padding-inline: 1.25rem;
+    }
+
+    &__columns {
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+  }
+}

@@ -1,0 +1,133 @@
+<section class="hero fade-in-up">
+  <div class="hero__content">
+    <div class="hero__brand">
+      <div class="hero__brand-pill">
+        <span class="hero__brand-name">Groupe HSM</span>
+        <span class="hero__brand-tagline">
+          {{ 'home.hero.brandTagline' | t }}
+        </span>
+      </div>
+    </div>
+
+    <h1>{{ 'home.hero.title' | t }}</h1>
+
+    <p class="hero__lead">
+      {{ 'home.hero.lead' | t }}
+    </p>
+
+    <div class="hero__actions">
+      <a class="btn btn-primary" href="#video">
+        {{ 'home.hero.ctaPrimary' | t }}
+      </a>
+      <a class="btn btn-ghost" routerLink="/ecosystem">
+        {{ 'home.hero.ctaSecondary' | t }}
+      </a>
+      <!-- 🔹 Nuovo bottone: link alla pagina recensioni -->
+      <a class="btn btn-ghost" routerLink="/reviews">
+        Recensioni
+      </a>
+    </div>
+
+    <div class="hero__meta">
+      <span>{{ 'home.hero.meta1' | t }}</span>
+      <span>{{ 'home.hero.meta2' | t }}</span>
+      <span>{{ 'home.hero.meta3' | t }}</span>
+    </div>
+  </div>
+
+  <div class="hero__panel">
+    <h3 class="headline-bar">{{ 'home.panel.title' | t }}</h3>
+    <p class="hero__panel-lead">
+      {{ 'home.panel.lead' | t }}
+    </p>
+    <div class="hero__grid">
+      <div class="hero-card">
+        <h4>{{ 'home.panel.card1.title' | t }}</h4>
+        <p>{{ 'home.panel.card1.body' | t }}</p>
+      </div>
+      <div class="hero-card">
+        <h4>{{ 'home.panel.card2.title' | t }}</h4>
+        <p>{{ 'home.panel.card2.body' | t }}</p>
+      </div>
+      <div class="hero-card">
+        <h4>{{ 'home.panel.card3.title' | t }}</h4>
+        <p>{{ 'home.panel.card3.body' | t }}</p>
+      </div>
+      <div class="hero-card">
+        <h4>{{ 'home.panel.card4.title' | t }}</h4>
+        <p>{{ 'home.panel.card4.body' | t }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="video" class="video">
+  <div class="video__inner fade-in-up">
+    <div class="video__header">
+      <h2 class="headline-bar">{{ 'home.video.title' | t }}</h2>
+      <p class="video__lead">
+        {{ 'home.video.lead' | t }}
+      </p>
+    </div>
+
+    <div class="video__frame">
+      <video
+        src="assets/video/2025-12-03 18-37-54.mp4"
+        controls
+        muted
+        playsinline
+      ></video>
+    </div>
+
+    <p class="video__caption">
+      {{ 'home.video.caption' | t }}
+    </p>
+  </div>
+</section>
+
+<section class="roadmap section fade-in-up">
+  <div class="roadmap__header">
+    <h2 class="headline-bar">{{ 'home.roadmap.title' | t }}</h2>
+    <p class="section__lead">
+      {{ 'home.roadmap.lead' | t }}
+    </p>
+  </div>
+
+  <div class="roadmap__timeline">
+    <div class="roadmap__item">
+      <div class="roadmap__badge">
+        {{ 'home.roadmap.phase1.badge' | t }}
+      </div>
+      <h3 class="headline-bar roadmap__title">
+        {{ 'home.roadmap.phase1.title' | t }}
+      </h3>
+      <p class="roadmap__body">
+        {{ 'home.roadmap.phase1.body' | t }}
+      </p>
+    </div>
+
+    <div class="roadmap__item">
+      <div class="roadmap__badge">
+        {{ 'home.roadmap.phase2.badge' | t }}
+      </div>
+      <h3 class="headline-bar roadmap__title">
+        {{ 'home.roadmap.phase2.title' | t }}
+      </h3>
+      <p class="roadmap__body">
+        {{ 'home.roadmap.phase2.body' | t }}
+      </p>
+    </div>
+
+    <div class="roadmap__item">
+      <div class="roadmap__badge">
+        {{ 'home.roadmap.phase3.badge' | t }}
+      </div>
+      <h3 class="headline-bar roadmap__title">
+        {{ 'home.roadmap.phase3.title' | t }}
+      </h3>
+      <p class="roadmap__body">
+        {{ 'home.roadmap.phase3.body' | t }}
+      </p>
+    </div>
+  </div>
+</section>

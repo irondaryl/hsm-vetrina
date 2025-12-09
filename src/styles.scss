@@ -1,1 +1,295 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --hsm-bg: #05060a;
+  --hsm-bg-alt: #0d1018;
+  --hsm-gold: #d9b35f;
+  --hsm-gold-soft: rgba(217, 179, 95, 0.16);
+  --hsm-gold-strong: rgba(217, 179, 95, 0.6);
+  --hsm-text: #f5f6fb;
+  --hsm-text-muted: #9fa4b8;
+  --hsm-border: #232736;
+  --hsm-radius-lg: 1.2rem;
+  --hsm-radius-md: 0.9rem;
+  --hsm-shadow-soft: 0 20px 55px rgba(0, 0, 0, 0.85);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: radial-gradient(circle at top, #1f2638 0, #05060a 55%);
+  color: var(--hsm-text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text',
+    'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* vignetta morbida globale */
+body::before {
+  content: '';
+  position: fixed;
+  inset: -40px;
+  background:
+    radial-gradient(circle at top left, rgba(217, 179, 95, 0.16), transparent 60%),
+    radial-gradient(circle at bottom right, rgba(98, 126, 255, 0.18), transparent 55%);
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: -1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+/* ---------- Sezioni vetrina (tutte le pagine) ---------- */
+
+.section {
+  margin-bottom: 3rem;
+
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.45rem;
+    position: relative;
+    padding-left: 0.5rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 3px;
+      height: 1.4rem;
+      transform: translateY(-50%);
+      border-radius: 999px;
+      background: linear-gradient(
+        180deg,
+        var(--hsm-gold-strong),
+        rgba(217, 179, 95, 0.1)
+      );
+    }
+  }
+
+  &__lead {
+    font-size: 0.95rem;
+    color: var(--hsm-text-muted);
+    max-width: 640px;
+    margin-bottom: 1.7rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.3rem;
+
+    &--two {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+  }
+}
+
+/* ---------- Card premium (usate dappertutto) ---------- */
+
+.card {
+  position: relative;
+  border-radius: var(--hsm-radius-lg);
+  padding: 1.15rem 1.25rem;
+  font-size: 0.9rem;
+  background: radial-gradient(circle at top left, #1a2136 0, #070810 62%);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease,
+    background 0.2s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(
+      135deg,
+      rgba(217, 179, 95, 0.3),
+      transparent 35%,
+      rgba(125, 167, 255, 0.2),
+      transparent 75%
+    );
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    mix-blend-mode: screen;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.45rem;
+    font-size: 1rem;
+  }
+
+  p,
+  li {
+    color: var(--hsm-text-muted);
+  }
+
+  ul {
+    padding-left: 1.1rem;
+    margin: 0.25rem 0 0;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--hsm-shadow-soft);
+    border-color: var(--hsm-gold-soft);
+    background: radial-gradient(circle at top left, #232a42 0, #05060a 62%);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+/* ---------- Form contatti ---------- */
+
+.contact {
+  display: flex;
+  justify-content: flex-start;
+
+  &__form {
+    max-width: 460px;
+    width: 100%;
+  }
+
+  .field {
+    margin-bottom: 1rem;
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      margin-bottom: 0.25rem;
+      color: var(--hsm-text-muted);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border-radius: 0.8rem;
+      border: 1px solid var(--hsm-border);
+      background: rgba(5, 6, 10, 0.9);
+      color: var(--hsm-text);
+      font-size: 0.85rem;
+      padding: 0.55rem 0.75rem;
+      outline: none;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease,
+        background 0.15s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--hsm-gold-strong);
+      box-shadow: 0 0 0 1px rgba(217, 179, 95, 0.35);
+      background: rgba(6, 8, 14, 0.95);
+    }
+  }
+
+  &__note {
+    margin-top: 0.6rem;
+    font-size: 0.75rem;
+    color: var(--hsm-text-muted);
+  }
+}
+
+/* ---------- Bottoni globali ---------- */
+
+.btn {
+  border-radius: 999px;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--hsm-border);
+  background: rgba(8, 9, 14, 0.96);
+  color: var(--hsm-text);
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: background 0.15s ease, box-shadow 0.15s ease,
+    transform 0.12s ease, border-color 0.15s ease;
+
+  &-primary {
+    border-color: var(--hsm-gold-soft);
+    background: radial-gradient(
+      circle at top,
+      rgba(217, 179, 95, 0.35),
+      rgba(12, 13, 20, 0.96)
+    );
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.65);
+  }
+
+  &-ghost {
+    background: transparent;
+  }
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.6);
+    border-color: var(--hsm-gold-soft);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+}
+
+/* ---------- Animazione base per sezioni ---------- */
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeInUp 0.55s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+  .section {
+    margin-bottom: 2.3rem;
+
+    h2 {
+      font-size: 1.35rem;
+    }
+
+    &__lead {
+      font-size: 0.9rem;
+    }
+  }
+}

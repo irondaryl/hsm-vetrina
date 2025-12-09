@@ -1,0 +1,123 @@
+<section class="section fade-in-up contact">
+  <div class="section__header">
+    <h1>{{ 'contact.title' | t }}</h1>
+    <p class="section__lead">
+      {{ 'contact.lead' | t }}
+    </p>
+  </div>
+
+  <div class="contact__content">
+    <form
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+      class="contact__form"
+      novalidate
+    >
+      <!-- Badge demo -->
+      <div class="contact__badge">
+        <span class="contact__badge-dot"></span>
+        <span class="contact__badge-label">Demo form</span>
+      </div>
+
+      <!-- Nome -->
+      <div class="form-row">
+        <label for="name">{{ 'contact.name.label' | t }}</label>
+        <input
+          id="name"
+          type="text"
+          formControlName="name"
+          [placeholder]="'contact.name.placeholder' | t"
+        />
+        <div class="form-error" *ngIf="submitted && f['name'].invalid">
+          <span *ngIf="f['name'].errors?.['required']">
+            {{ 'contact.name.label' | t }} è obbligatorio.
+          </span>
+          <span *ngIf="f['name'].errors?.['minlength']">
+            Inserisci almeno 2 caratteri.
+          </span>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-row">
+        <label for="email">{{ 'contact.email.label' | t }}</label>
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
+          [placeholder]="'contact.email.placeholder' | t"
+        />
+        <div class="form-error" *ngIf="submitted && f['email'].invalid">
+          <span *ngIf="f['email'].errors?.['required']">
+            {{ 'contact.email.label' | t }} è obbligatoria.
+          </span>
+          <span *ngIf="f['email'].errors?.['email']">
+            Inserisci un indirizzo email valido.
+          </span>
+        </div>
+      </div>
+
+      <!-- Motivo -->
+      <div class="form-row">
+        <label for="reason">{{ 'contact.reason.label' | t }}</label>
+        <select id="reason" formControlName="reason">
+          <option value="partnership">
+            {{ 'contact.reason.option.partnership' | t }}
+          </option>
+          <option value="investors">
+            {{ 'contact.reason.option.investors' | t }}
+          </option>
+          <option value="other">
+            {{ 'contact.reason.option.other' | t }}
+          </option>
+        </select>
+      </div>
+
+      <!-- Messaggio -->
+      <div class="form-row">
+        <label for="message">{{ 'contact.message.label' | t }}</label>
+        <textarea
+          id="message"
+          rows="5"
+          formControlName="message"
+          [placeholder]="'contact.message.placeholder' | t"
+        ></textarea>
+        <div class="form-error" *ngIf="submitted && f['message'].invalid">
+          <span *ngIf="f['message'].errors?.['required']">
+            {{ 'contact.message.label' | t }} è obbligatorio.
+          </span>
+          <span *ngIf="f['message'].errors?.['minlength']">
+            Inserisci almeno 10 caratteri.
+          </span>
+        </div>
+      </div>
+
+      <!-- Submit + stato -->
+      <div class="form-actions">
+        <button
+          class="btn btn-primary contact__submit"
+          type="submit"
+          [disabled]="form.invalid || loading"
+        >
+          <span class="contact__submit-label">
+            {{ 'contact.submit' | t }}
+          </span>
+
+          <span class="contact__submit-pill">Demo</span>
+
+          <span class="contact__spinner" *ngIf="loading"></span>
+        </button>
+
+        <p class="form-success" *ngIf="success">
+          <span class="form-success__dot"></span>
+          <span>{{ 'contact.success' | t }}</span>
+        </p>
+      </div>
+
+      <!-- Disclaimer -->
+      <p class="contact__disclaimer">
+        {{ 'contact.disclaimer' | t }}
+      </p>
+    </form>
+  </div>
+</section>

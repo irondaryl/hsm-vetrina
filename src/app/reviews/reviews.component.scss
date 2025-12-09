@@ -1,0 +1,143 @@
+.reviews {
+  margin-top: 3rem;
+
+  &__header {
+    margin-bottom: 1.4rem;
+  }
+
+  &__auth {
+    margin-bottom: 1.2rem;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  &__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+  }
+
+  &__user-name {
+    font-size: 0.9rem;
+  }
+
+  &__form {
+    border-radius: 1rem;
+    border: 1px solid var(--hsm-border);
+    padding: 1rem 1.1rem;
+    background: rgba(7, 9, 15, 0.95);
+    margin-bottom: 1.8rem;
+  }
+
+  .form-row {
+    margin-bottom: 0.9rem;
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      margin-bottom: 0.25rem;
+    }
+
+    textarea {
+      width: 100%;
+      border-radius: 0.7rem;
+      border: 1px solid var(--hsm-border);
+      background: #05060a;
+      color: var(--hsm-text);
+      font-size: 0.85rem;
+      padding: 0.5rem 0.7rem;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: var(--hsm-gold-soft);
+    }
+  }
+
+  .stars {
+    display: inline-flex;
+    gap: 0.15rem;
+    font-size: 1.2rem;
+
+    input {
+      display: none;
+    }
+
+    label {
+      cursor: pointer;
+      color: var(--hsm-text-muted);
+    }
+
+    &__star--active {
+      color: #f6d365;
+      text-shadow: 0 0 8px rgba(246, 211, 101, 0.7);
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  &__item {
+    border-radius: 1rem;
+    border: 1px solid var(--hsm-border);
+    background: rgba(7, 9, 15, 0.95);
+    padding: 0.9rem 1rem;
+    font-size: 0.86rem;
+  }
+
+  &__item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.4rem;
+  }
+
+  &__item-author {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  &__item-name {
+    font-weight: 500;
+  }
+
+  &__item-rating {
+    font-size: 0.8rem;
+    color: #f6d365;
+  }
+
+  &__item-date {
+    font-size: 0.75rem;
+    color: var(--hsm-text-muted);
+  }
+
+  &__item-comment {
+    margin: 0.3rem 0 0;
+    color: var(--hsm-text-muted);
+  }
+}
+
+/* Bordino oro per il titolo (puoi riusare quello che hai già) */
+.headline-bar {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.headline-bar::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.28em;
+  width: 2px;
+  height: 1em;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #f6e7af, #c89b3c);
+  box-shadow: 0 0 8px rgba(200, 155, 60, 0.8);
+}

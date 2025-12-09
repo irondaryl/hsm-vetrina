@@ -1,0 +1,149 @@
+<header class="hsm-header">
+  <div class="hsm-header__inner">
+    <!-- Brand -->
+    <a routerLink="/" class="hsm-header__brand" (click)="closeMenu()">
+      <div class="hsm-header__logo">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <div class="hsm-header__text">
+        <span class="hsm-header__title">HSM</span>
+        <span class="hsm-header__subtitle">
+          {{ 'home.hero.brandTagline' | t }}
+        </span>
+      </div>
+    </a>
+
+    <!-- Nav desktop -->
+    <nav class="hsm-header__nav">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
+      >
+        {{ 'nav.overview' | t }}
+      </a>
+
+      <a
+        routerLink="/ecosystem"
+        routerLinkActive="active"
+        (click)="closeMenu()"
+      >
+        {{ 'nav.ecosystem' | t }}
+      </a>
+
+      <a
+        routerLink="/platform"
+        routerLinkActive="active"
+        (click)="closeMenu()"
+      >
+        {{ 'nav.coreBanking' | t }}
+      </a>
+
+      <a
+        routerLink="/risk-ai"
+        routerLinkActive="active"
+        (click)="closeMenu()"
+      >
+        {{ 'nav.riskAI' | t }}
+      </a>
+
+      <a
+        routerLink="/about"
+        routerLinkActive="active"
+        (click)="closeMenu()"
+      >
+        {{ 'nav.about' | t }}
+      </a>
+
+      <!-- 🔹 Nuova voce: Recensioni 
+       
+         <a
+        routerLink="/reviews"
+        routerLinkActive="active"
+        (click)="closeMenu()"
+      >
+        {{ 'nav.reviews' | t }}
+      </a>
+      -->
+   
+
+      <a
+        routerLink="/contact"
+        routerLinkActive="active"
+        class="cta"
+        (click)="closeMenu()"
+      >
+        {{ 'nav.contact' | t }}
+      </a>
+    </nav>
+
+    <!-- Language switch desktop -->
+    <div class="hsm-header__lang">
+      <button
+        *ngFor="let l of langs"
+        type="button"
+        (click)="setLang(l.code)"
+        [class.active]="isActive(l.code)"
+      >
+        {{ l.label }}
+      </button>
+    </div>
+
+    <!-- Burger mobile -->
+    <button
+      class="hsm-header__burger"
+      (click)="toggleMenu()"
+      aria-label="Menu"
+    >
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Menu mobile -->
+  <div class="hsm-header__mobile" *ngIf="isMobileMenuOpen">
+    <a routerLink="/" (click)="closeMenu()">
+      {{ 'nav.overview' | t }}
+    </a>
+
+    <a routerLink="/ecosystem" (click)="closeMenu()">
+      {{ 'nav.ecosystem' | t }}
+    </a>
+
+    <a routerLink="/platform" (click)="closeMenu()">
+      {{ 'nav.coreBanking' | t }}
+    </a>
+
+    <a routerLink="/risk-ai" (click)="closeMenu()">
+      {{ 'nav.riskAI' | t }}
+    </a>
+
+    <a routerLink="/about" (click)="closeMenu()">
+      {{ 'nav.about' | t }}
+    </a>
+
+    <!-- 🔹 Nuova voce mobile: Recensioni -->
+    <a routerLink="/reviews" (click)="closeMenu()">
+      {{ 'nav.reviews' | t }}
+    </a>
+
+    <a routerLink="/contact" class="cta" (click)="closeMenu()">
+      {{ 'nav.contact' | t }}
+    </a>
+
+    <!-- Switch lingue anche nel menu mobile -->
+    <div class="hsm-header__mobile-lang">
+      <button
+        *ngFor="let l of langs"
+        type="button"
+        (click)="setLang(l.code); closeMenu()"
+        [class.active]="isActive(l.code)"
+      >
+        {{ l.label }}
+      </button>
+    </div>
+  </div>
+</header>
