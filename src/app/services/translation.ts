@@ -86,6 +86,21 @@ const TRANSLATIONS: TranslationMap = {
     'reviews.empty':
       'Non ci sono ancora recensioni. Sii il primo a lasciare un feedback!',
 
+    // TESTIMONIALS / SENJA
+    'testimonials.title': 'Dicono di HSM',
+    'testimonials.lead':
+      'Alcune opinioni e testimonianze raccolte su HSM.',
+    'testimonials.page.intro':
+      'HSM è ancora un concept in evoluzione. Le recensioni e i commenti qui raccolti servono a capire se l’impostazione, il design e i moduli sviluppati vanno nella direzione giusta.',
+    'testimonials.page.bullet1':
+      'Feedback su UX, tono e posizionamento del brand.',
+    'testimonials.page.bullet2':
+      'Opinioni sull’idea di Governance Layer, Core Banking e Risk Center.',
+    'testimonials.page.bullet3':
+      'Suggerimenti su cosa vorresti vedere in una futura versione reale.',
+    'testimonials.page.note':
+      'Le recensioni sono raccolte tramite Senja e mostrate in tempo reale in questa sezione.',
+
     // ECOSYSTEM
     'ecosystem.title': 'Ecosistema HSM',
     'ecosystem.lead':
@@ -143,7 +158,7 @@ const TRANSLATIONS: TranslationMap = {
     'risk.card2.item1':
       'Analisi dei pattern di spesa a partire dalle transazioni.',
     'risk.card2.item2':
-      'Categorizzazioni dinamiche e insight sull’utilizzo dei conti.',
+      "Categorizzazioni dinamiche e insight sull'utilizzo dei conti.",
     'risk.card2.item3':
       'Modulo pensato per evolvere verso analisi predittiva.',
     'risk.card3.title': 'Financial Health Score',
@@ -187,6 +202,36 @@ const TRANSLATIONS: TranslationMap = {
       'Messaggio inviato (demo). Verrai ricontattato tramite email se necessario.',
     'contact.disclaimer':
       'Il form è dimostrativo. Puoi sostituirlo in futuro con un’integrazione reale (es. email o backend dedicato).',
+
+    // CONTACT – vecchie chiavi
+    'contact.badge.request': 'Richiesta di contatto',
+    'contact.mailto.success':
+      'Abbiamo aperto il tuo client email con il messaggio pre-compilato. Puoi rivederlo e inviarlo quando vuoi.',
+    'contact.mailto.disclaimer':
+      'Il form non salva dati sui server HSM: genera semplicemente una email indirizzata a irondaryl@proton.me dal tuo client.',
+    'contact.direct.title': 'Contatti diretti',
+    'contact.direct.body':
+      'Per partnership, ecosistema HSM o demo della piattaforma puoi usare direttamente i contatti qui sotto oppure il form sulla destra.',
+    'contact.direct.email.label': 'Email',
+    'contact.direct.scopes.label': 'Ambiti',
+    'contact.direct.scopes.value':
+      'Governance Layer • Core Banking • Risk & AI',
+    'contact.direct.pill':
+      'Contatto diretto con il creator del concept HSM.',
+
+    // CONTACT – nuove chiavi (nuovo componente)
+    'contact.direct.emailLabel': 'Email',
+    'contact.direct.areasLabel': 'Ambiti',
+    'contact.direct.areasValue':
+      'Governance Layer • Core Banking • Risk & AI',
+    'contact.direct.footer':
+      'Contatto diretto con il creator del concept HSM.',
+    'contact.form.badge': 'Richiesta di contatto',
+    'contact.form.successEmailOpened':
+      'Abbiamo aperto il tuo client email con il messaggio pre-compilato. Puoi rivederlo e inviarlo quando vuoi.',
+    'contact.disclaimer.emailOnly':
+      'Il form non salva dati sui server HSM: genera semplicemente una email indirizzata a ',
+    'contact.reviewsCta': 'Lascia una recensione su HSM',
   },
 
   en: {
@@ -267,6 +312,21 @@ const TRANSLATIONS: TranslationMap = {
     'reviews.publish': 'Publish review',
     'reviews.empty':
       'There are no reviews yet. Be the first to leave your feedback!',
+
+    // TESTIMONIALS / SENJA
+    'testimonials.title': 'What people say about HSM',
+    'testimonials.lead':
+      'A collection of testimonials and feedback about HSM.',
+    'testimonials.page.intro':
+      'HSM is still an evolving concept. The reviews and comments collected here help us understand whether the setup, design and developed modules are going in the right direction.',
+    'testimonials.page.bullet1':
+      'Feedback on UX, tone and brand positioning.',
+    'testimonials.page.bullet2':
+      'Opinions on the idea of the Governance Layer, Core Banking and Risk Center.',
+    'testimonials.page.bullet3':
+      'Suggestions about what you would like to see in a future real version.',
+    'testimonials.page.note':
+      'Reviews are collected through Senja and displayed in real time in this section.',
 
     // ECOSYSTEM
     'ecosystem.title': 'HSM ecosystem',
@@ -370,6 +430,36 @@ const TRANSLATIONS: TranslationMap = {
       'Message sent (demo). We will reach out via email if needed.',
     'contact.disclaimer':
       'This form is demonstrative. You can replace it in the future with a real integration (e.g. email or dedicated backend).',
+
+    // CONTACT – old keys
+    'contact.badge.request': 'Contact request',
+    'contact.mailto.success':
+      'We opened your email client with a pre-filled message. You can review it and send it whenever you prefer.',
+    'contact.mailto.disclaimer':
+      'The form does not store data on HSM servers: it simply opens an email addressed to irondaryl@proton.me from your client.',
+    'contact.direct.title': 'Direct contacts',
+    'contact.direct.body':
+      'For partnerships, the HSM ecosystem or a demo of the platform, you can use the contacts below or the form on the right.',
+    'contact.direct.email.label': 'Email',
+    'contact.direct.scopes.label': 'Areas',
+    'contact.direct.scopes.value':
+      'Governance Layer • Core Banking • Risk & AI',
+    'contact.direct.pill':
+      'Direct contact with the creator of the HSM concept.',
+
+    // CONTACT – new keys
+    'contact.direct.emailLabel': 'Email',
+    'contact.direct.areasLabel': 'Areas',
+    'contact.direct.areasValue':
+      'Governance Layer • Core Banking • Risk & AI',
+    'contact.direct.footer':
+      'Direct contact with the creator of the HSM concept.',
+    'contact.form.badge': 'Contact request',
+    'contact.form.successEmailOpened':
+      'We opened your email client with a pre-filled message. You can review it and send it whenever you like.',
+    'contact.disclaimer.emailOnly':
+      'The form does not store data on HSM servers: it simply generates an email addressed to ',
+    'contact.reviewsCta': 'Leave a review on HSM',
   },
 
   de: {
@@ -451,6 +541,21 @@ const TRANSLATIONS: TranslationMap = {
     'reviews.publish': 'Bewertung veröffentlichen',
     'reviews.empty':
       'Es gibt noch keine Bewertungen. Sei der Erste, der Feedback gibt!',
+
+    // TESTIMONIALS / SENJA
+    'testimonials.title': 'Was man über HSM sagt',
+    'testimonials.lead':
+      'Eine Sammlung von Meinungen und Rückmeldungen zu HSM.',
+    'testimonials.page.intro':
+      'HSM ist noch ein Konzept in Entwicklung. Die hier gesammelten Bewertungen und Kommentare helfen zu verstehen, ob Setup, Design und entwickelte Module in die richtige Richtung gehen.',
+    'testimonials.page.bullet1':
+      'Feedback zu UX, Tonalität und Markenpositionierung.',
+    'testimonials.page.bullet2':
+      'Meinungen zur Idee des Governance Layers, des Core Banking und des Risk Centers.',
+    'testimonials.page.bullet3':
+      'Vorschläge, was du dir in einer zukünftigen realen Version wünschen würdest.',
+    'testimonials.page.note':
+      'Die Bewertungen werden über Senja gesammelt und in diesem Bereich in Echtzeit angezeigt.',
 
     // ECOSYSTEM
     'ecosystem.title': 'HSM Ökosystem',
@@ -556,6 +661,36 @@ const TRANSLATIONS: TranslationMap = {
       'Nachricht gesendet (Demo). Wir melden uns bei Bedarf per E-Mail.',
     'contact.disclaimer':
       'Dieses Formular ist demonstrativ. Später kann eine echte Integration (z.B. E-Mail oder Backend) angeschlossen werden.',
+
+    // CONTACT – old
+    'contact.badge.request': 'Kontaktanfrage',
+    'contact.mailto.success':
+      'Wir haben deinen E-Mail-Client mit einer vorbefüllten Nachricht geöffnet. Du kannst sie prüfen und senden, wann du möchtest.',
+    'contact.mailto.disclaimer':
+      'Das Formular speichert keine Daten auf HSM-Servern: Es öffnet lediglich eine E-Mail an irondaryl@proton.me in deinem E-Mail-Client.',
+    'contact.direct.title': 'Direkte Kontakte',
+    'contact.direct.body':
+      'Für Partnerschaften, das HSM-Ökosystem oder eine Demo der Plattform kannst du die Kontakte unten oder das Formular rechts nutzen.',
+    'contact.direct.email.label': 'E-Mail',
+    'contact.direct.scopes.label': 'Bereiche',
+    'contact.direct.scopes.value':
+      'Governance Layer • Core Banking • Risk & AI',
+    'contact.direct.pill':
+      'Direkter Kontakt mit dem Creator des HSM-Konzepts.',
+
+    // CONTACT – new
+    'contact.direct.emailLabel': 'E-Mail',
+    'contact.direct.areasLabel': 'Bereiche',
+    'contact.direct.areasValue':
+      'Governance Layer • Core Banking • Risk & KI',
+    'contact.direct.footer':
+      'Direkter Kontakt mit dem Creator des HSM-Konzepts.',
+    'contact.form.badge': 'Kontaktanfrage',
+    'contact.form.successEmailOpened':
+      'Wir haben deinen E-Mail-Client mit einer vorausgefüllten Nachricht geöffnet. Du kannst sie prüfen und senden, wann du möchtest.',
+    'contact.disclaimer.emailOnly':
+      'Das Formular speichert keine Daten auf HSM-Servern: Es öffnet lediglich eine E-Mail an ',
+    'contact.reviewsCta': 'Bewertung für HSM hinterlassen',
   },
 
   fr: {
@@ -637,6 +772,21 @@ const TRANSLATIONS: TranslationMap = {
     'reviews.publish': "Publier l'avis",
     'reviews.empty':
       "Il n'y a pas encore d'avis. Sois le premier à laisser un feedback !",
+
+    // TESTIMONIALS / SENJA
+    'testimonials.title': 'Ce que l’on dit de HSM',
+    'testimonials.lead':
+      'Une sélection de témoignages et avis sur HSM.',
+    'testimonials.page.intro':
+      'HSM est encore un concept en évolution. Les avis et commentaires recueillis ici servent à vérifier si le cadrage, le design et les modules développés vont dans la bonne direction.',
+    'testimonials.page.bullet1':
+      'Feedback sur l’UX, le ton et le positionnement de la marque.',
+    'testimonials.page.bullet2':
+      'Avis sur l’idée de Governance Layer, de Core Banking et de Risk Center.',
+    'testimonials.page.bullet3':
+      'Suggestions sur ce que tu aimerais voir dans une future version réelle.',
+    'testimonials.page.note':
+      'Les avis sont collectés via Senja et affichés en temps réel dans cette section.',
 
     // ECOSYSTEM
     'ecosystem.title': 'Écosystème HSM',
@@ -743,6 +893,36 @@ const TRANSLATIONS: TranslationMap = {
       'Message envoyé (démo). Nous reviendrons vers toi par email si nécessaire.',
     'contact.disclaimer':
       'Ce formulaire est démonstratif. Il pourra être relié plus tard à une intégration réelle (email ou backend dédié).',
+
+    // CONTACT – old
+    'contact.badge.request': 'Demande de contact',
+    'contact.mailto.success':
+      'Nous avons ouvert ton client e-mail avec un message pré-rempli. Tu peux le relire et l’envoyer quand tu veux.',
+    'contact.mailto.disclaimer':
+      'Le formulaire ne stocke aucune donnée sur les serveurs HSM : il ouvre simplement un email adressé à irondaryl@proton.me depuis ton client.',
+    'contact.direct.title': 'Contacts directs',
+    'contact.direct.body':
+      'Pour les partenariats, l’écosystème HSM ou une démo de la plateforme, tu peux utiliser les contacts ci-dessous ou le formulaire à droite.',
+    'contact.direct.email.label': 'Email',
+    'contact.direct.scopes.label': 'Domaines',
+    'contact.direct.scopes.value':
+      'Governance Layer • Core Banking • Risk & AI',
+    'contact.direct.pill':
+      'Contact direct avec le créateur du concept HSM.',
+
+    // CONTACT – new
+    'contact.direct.emailLabel': 'Email',
+    'contact.direct.areasLabel': 'Domaines',
+    'contact.direct.areasValue':
+      'Governance Layer • Core Banking • Risk & IA',
+    'contact.direct.footer':
+      'Contact direct avec le créateur du concept HSM.',
+    'contact.form.badge': 'Demande de contact',
+    'contact.form.successEmailOpened':
+      'Nous avons ouvert ton client email avec un message pré-rempli. Tu peux le relire et l’envoyer quand tu veux.',
+    'contact.disclaimer.emailOnly':
+      'Le formulaire ne stocke aucune donnée sur des serveurs HSM : il génère simplement un email adressé à ',
+    'contact.reviewsCta': 'Laisser un avis sur HSM',
   },
 
   es: {
@@ -824,6 +1004,21 @@ const TRANSLATIONS: TranslationMap = {
     'reviews.publish': 'Publicar reseña',
     'reviews.empty':
       'Todavía no hay reseñas. ¡Sé el primero en dejar tu opinión!',
+
+    // TESTIMONIALS / SENJA
+    'testimonials.title': 'Qué se dice sobre HSM',
+    'testimonials.lead':
+      'Una colección de testimonios y opiniones sobre HSM.',
+    'testimonials.page.intro':
+      'HSM sigue siendo un concepto en evolución. Las reseñas y comentarios recopilados aquí sirven para entender si el enfoque, el diseño y los módulos desarrollados van en la dirección correcta.',
+    'testimonials.page.bullet1':
+      'Feedback sobre UX, tono y posicionamiento de marca.',
+    'testimonials.page.bullet2':
+      'Opiniones sobre la idea de Governance Layer, Core Banking y Risk Center.',
+    'testimonials.page.bullet3':
+      'Sugerencias sobre lo que te gustaría ver en una futura versión real.',
+    'testimonials.page.note':
+      'Las reseñas se recogen a través de Senja y se muestran en tiempo real en esta sección.',
 
     // ECOSYSTEM
     'ecosystem.title': 'Ecosistema HSM',
@@ -930,6 +1125,36 @@ const TRANSLATIONS: TranslationMap = {
       'Mensaje enviado (demo). Te contactaremos por email si es necesario.',
     'contact.disclaimer':
       'El formulario es demostrativo. Más adelante se puede conectar a una integración real (email o backend dedicado).',
+
+    // CONTACT – old
+    'contact.badge.request': 'Solicitud de contacto',
+    'contact.mailto.success':
+      'Hemos abierto tu cliente de correo con un mensaje precompletado. Puedes revisarlo y enviarlo cuando quieras.',
+    'contact.mailto.disclaimer':
+      'El formulario no guarda datos en servidores de HSM: simplemente abre un correo dirigido a irondaryl@proton.me desde tu cliente.',
+    'contact.direct.title': 'Contactos directos',
+    'contact.direct.body':
+      'Para partnerships, el ecosistema HSM o una demo de la plataforma puedes usar los contactos de abajo o el formulario de la derecha.',
+    'contact.direct.email.label': 'Email',
+    'contact.direct.scopes.label': 'Ámbitos',
+    'contact.direct.scopes.value':
+      'Governance Layer • Core Banking • Risk & AI',
+    'contact.direct.pill':
+      'Contacto directo con el creador del concepto HSM.',
+
+    // CONTACT – new
+    'contact.direct.emailLabel': 'Email',
+    'contact.direct.areasLabel': 'Ámbitos',
+    'contact.direct.areasValue':
+      'Governance Layer • Core Banking • Risk & IA',
+    'contact.direct.footer':
+      'Contacto directo con el creador del concepto HSM.',
+    'contact.form.badge': 'Solicitud de contacto',
+    'contact.form.successEmailOpened':
+      'Hemos abierto tu cliente de correo con el mensaje pre-rellenado. Puedes revisarlo y enviarlo cuando quieras.',
+    'contact.disclaimer.emailOnly':
+      'El formulario no guarda datos en servidores HSM: simplemente genera un email dirigido a ',
+    'contact.reviewsCta': 'Dejar una reseña sobre HSM',
   },
 };
 

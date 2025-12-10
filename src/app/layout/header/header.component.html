@@ -26,49 +26,26 @@
         {{ 'nav.overview' | t }}
       </a>
 
-      <a
-        routerLink="/ecosystem"
-        routerLinkActive="active"
-        (click)="closeMenu()"
-      >
+      <a routerLink="/ecosystem" routerLinkActive="active" (click)="closeMenu()">
         {{ 'nav.ecosystem' | t }}
       </a>
 
-      <a
-        routerLink="/platform"
-        routerLinkActive="active"
-        (click)="closeMenu()"
-      >
+      <a routerLink="/platform" routerLinkActive="active" (click)="closeMenu()">
         {{ 'nav.coreBanking' | t }}
       </a>
 
-      <a
-        routerLink="/risk-ai"
-        routerLinkActive="active"
-        (click)="closeMenu()"
-      >
+      <a routerLink="/risk-ai" routerLinkActive="active" (click)="closeMenu()">
         {{ 'nav.riskAI' | t }}
       </a>
 
-      <a
-        routerLink="/about"
-        routerLinkActive="active"
-        (click)="closeMenu()"
-      >
+      <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">
         {{ 'nav.about' | t }}
       </a>
 
-      <!-- 🔹 Nuova voce: Recensioni 
-       
-         <a
-        routerLink="/reviews"
-        routerLinkActive="active"
-        (click)="closeMenu()"
-      >
+      <!-- 🔹 NUOVA VOCE: RECENSIONI -->
+      <a routerLink="/reviews" routerLinkActive="active" (click)="closeMenu()">
         {{ 'nav.reviews' | t }}
       </a>
-      -->
-   
 
       <a
         routerLink="/contact"
@@ -93,11 +70,7 @@
     </div>
 
     <!-- Burger mobile -->
-    <button
-      class="hsm-header__burger"
-      (click)="toggleMenu()"
-      aria-label="Menu"
-    >
+    <button class="hsm-header__burger" (click)="toggleMenu()" aria-label="Menu">
       <span></span>
       <span></span>
     </button>
@@ -125,7 +98,7 @@
       {{ 'nav.about' | t }}
     </a>
 
-    <!-- 🔹 Nuova voce mobile: Recensioni -->
+    <!-- 🔹 NUOVA VOCE: RECENSIONI (mobile) -->
     <a routerLink="/reviews" (click)="closeMenu()">
       {{ 'nav.reviews' | t }}
     </a>

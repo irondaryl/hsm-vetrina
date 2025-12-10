@@ -1,112 +1,80 @@
-<section class="reviews section fade-in-up">
-  <div class="reviews__header">
-    <h2 class="headline-bar">Recensioni su HSM</h2>
-    <p class="section__lead">
-      Lascia un feedback sul concept, sul sito o sulla piattaforma.
-    </p>
-  </div>
+<section class="section testimonials-page fade-in-up">
+  <div class="testimonials-page__inner">
+    <!-- Header -->
+    <header class="testimonials-page__header">
+      <div class="testimonials-page__badge">
+        <span class="testimonials-page__badge-dot"></span>
+        <span class="testimonials-page__badge-label">
+          {{ 'testimonials.badge' | t }}
+        </span>
+      </div>
 
-  <!-- Login / Info utente -->
-  <div class="reviews__auth">
-    <!-- Se NON sono loggato, mostro un semplice bottone -->
-    <ng-container *ngIf="!user; else loggedBlock">
-      <button class="btn btn-primary" (click)="signInWithGoogle()">
-        Accedi con Google per recensire
-      </button>
-    </ng-container>
+      <h1 class="headline-bar">
+        {{ 'testimonials.title' | t }}
+      </h1>
 
-    <!-- Se sono loggato -->
-    <ng-template #loggedBlock>
-      <div class="reviews__user">
-        <img
-          *ngIf="user?.photoUrl as photo"
-          [src]="photo"
-          alt="avatar"
-          class="reviews__avatar"
-        />
+      <p class="section__lead testimonials-page__lead">
+        {{ 'testimonials.lead' | t }}
+      </p>
+    </header>
 
-        <div>
-          <div class="reviews__user-name">{{ user?.name }}</div>
-          <button class="btn btn-ghost btn-xs" (click)="signOut()">
-            Esci
-          </button>
+    <!-- Layout 2 colonne -->
+    <div class="testimonials-page__grid">
+      <!-- Colonna testo -->
+      <article class="testimonials-page__info">
+        <p class="testimonials-page__intro">
+          {{ 'testimonials.page.intro' | t }}
+        </p>
+
+        <ul class="testimonials-page__bullets">
+          <li>
+            <span class="dot"></span>
+            {{ 'testimonials.page.bullet1' | t }}
+          </li>
+          <li>
+            <span class="dot"></span>
+            {{ 'testimonials.page.bullet2' | t }}
+          </li>
+          <li>
+            <span class="dot"></span>
+            {{ 'testimonials.page.bullet3' | t }}
+          </li>
+        </ul>
+
+        <div class="testimonials-page__actions">
+          <a
+            class="testimonials-page__cta"
+            href="https://senja.io/p/groupe-hsm/r/R9SIkP"
+            target="_blank"
+            rel="noopener"
+          >
+            {{ 'contact.reviewsCta' | t }}
+          </a>
+
+          <p class="testimonials-page__hint">
+            {{ 'testimonials.hint' | t }}
+          </p>
         </div>
-      </div>
-    </ng-template>
-  </div>
+      </article>
 
-  <!-- Form recensione (solo se loggato) -->
-  <form
-    class="reviews__form"
-    [formGroup]="form"
-    (ngSubmit)="onSubmit()"
-    *ngIf="user"
-  >
-    <div class="form-row">
-      <label>Valutazione</label>
-      <div class="stars">
-        <label
-          *ngFor="let r of [1, 2, 3, 4, 5]"
-          [class.stars__star--active]="r <= form.value.rating"
-        >
-          <input
-            type="radio"
-            formControlName="rating"
-            [value]="r"
-            [checked]="r === form.value.rating"
-          />
-          ★
-        </label>
-      </div>
-    </div>
-
-    <div class="form-row">
-      <label for="comment">Commento</label>
-      <textarea
-        id="comment"
-        rows="3"
-        formControlName="comment"
-        placeholder="Scrivi cosa ti è piaciuto, cosa miglioreresti..."
-      ></textarea>
-    </div>
-
-    <button
-      class="btn btn-primary"
-      type="submit"
-      [disabled]="form.invalid || loading"
-    >
-      Pubblica recensione
-    </button>
-  </form>
-
-  <!-- Lista recensioni -->
-  <div class="reviews__list">
-    <article class="reviews__item" *ngFor="let r of reviews">
-      <div class="reviews__item-header">
-        <div class="reviews__item-author">
-          <img
-            *ngIf="r.authorAvatarUrl"
-            [src]="r.authorAvatarUrl"
-            alt="avatar"
-            class="reviews__avatar"
-          />
-          <div>
-            <div class="reviews__item-name">{{ r.authorName }}</div>
-            <div class="reviews__item-rating">
-              <span *ngFor="let s of [1, 2, 3, 4, 5]">
-                {{ s <= r.rating ? '★' : '☆' }}
-              </span>
-            </div>
+      <!-- Colonna wall Senja -->
+      <aside class="testimonials-page__widget">
+        <div class="testimonials-page__widget-shell">
+          <div class="testimonials-page__widget-inner">
+            <iframe
+              id="wall-of-love-ilkyFPO"
+              src="https://senja.io/p/groupe-hsm/ilkyFPO?hideNavigation=true&embed=true"
+              title="Wall of Love"
+              frameborder="0"
+              scrolling="auto"
+            ></iframe>
           </div>
         </div>
-        <div class="reviews__item-date">
-          {{ r.createdAt | date: 'dd/MM/yyyy' }}
-        </div>
-      </div>
 
-      <p class="reviews__item-comment">
-        {{ r.comment }}
-      </p>
-    </article>
+        <p class="testimonials-page__note">
+          {{ 'testimonials.page.note' | t }}
+        </p>
+      </aside>
+    </div>
   </div>
 </section>

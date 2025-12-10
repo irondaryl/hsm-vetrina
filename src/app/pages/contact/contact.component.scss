@@ -12,64 +12,129 @@
     max-width: 620px;
     margin-bottom: 1.5rem;
   }
+}
 
+/* ===========================
+   CONTACT PAGE LAYOUT
+   =========================== */
+
+.contact-page {
   &__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 1.2rem;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.05fr);
+    gap: 2.8rem;
+    align-items: flex-start;
+  }
 
-    &--two {
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  &__intro {
+    max-width: 560px;
+  }
+
+  &__cards {
+    margin-top: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  &__form-wrapper {
+    max-width: 540px;
+    width: 100%;
+  }
+}
+
+/* ===========================
+   SIDE CARD CON CONTATTI
+   =========================== */
+
+.contact-card {
+  border-radius: 1.1rem;
+  border: 1px solid var(--hsm-border);
+  background: radial-gradient(
+      circle at top left,
+      rgba(255, 215, 128, 0.1),
+      transparent 60%
+    ),
+    rgba(7, 9, 15, 0.96);
+  padding: 1.1rem 1.3rem;
+  font-size: 0.86rem;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.6);
+
+  h3 {
+    margin: 0 0 0.4rem;
+    font-size: 0.95rem;
+  }
+
+  p {
+    margin: 0 0 0.75rem;
+    color: var(--hsm-text-muted);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.55rem;
+  }
+
+  &__label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--hsm-text-muted);
+    margin-bottom: 0.15rem;
+  }
+
+  &__value {
+    font-size: 0.86rem;
+    color: #f5f6fb;
+    text-decoration: none;
+    word-break: break-all;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
 
-.card {
-  border-radius: 1rem;
-  border: 1px solid var(--hsm-border);
-  background: rgba(7, 9, 15, 0.95);
-  padding: 1.1rem 1.2rem;
-  font-size: 0.85rem;
+/* Pill informativa */
 
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0.35rem;
-    font-size: 0.95rem;
-  }
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 215, 128, 0.35);
+  background: rgba(7, 9, 15, 0.9);
+  font-size: 0.8rem;
+  color: var(--hsm-text-muted);
 
-  p,
-  li {
-    color: var(--hsm-text-muted);
-  }
-
-  ul {
-    padding-left: 1.1rem;
-    margin: 0.2rem 0 0;
+  &__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--hsm-gold-soft);
+    box-shadow: 0 0 8px rgba(255, 215, 128, 0.9);
   }
 }
 
-.contact {
-  display: flex;
-  justify-content: flex-start;
+/* ===========================
+   FORM CONTATTI
+   =========================== */
 
-  &__content {
-    width: 100%;
-    max-width: 540px;
-  }
-
-  &__form {
-    width: 100%;
-    padding: 1.4rem 1.6rem;
-    border-radius: 1.2rem;
-    border: 1px solid var(--hsm-border);
-    background: linear-gradient(
+.contact-form {
+  width: 100%;
+  padding: 1.5rem 1.7rem;
+  border-radius: 1.3rem;
+  border: 1px solid var(--hsm-border);
+  background: linear-gradient(
       135deg,
       rgba(255, 215, 128, 0.06),
       rgba(7, 9, 15, 0.96)
     );
-    backdrop-filter: blur(18px);
-    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.6);
-  }
+  backdrop-filter: blur(18px);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.6);
+  font-size: 0.86rem;
 
   &__badge {
     display: inline-flex;
@@ -111,7 +176,7 @@
     select,
     textarea {
       width: 100%;
-      border-radius: 0.7rem;
+      border-radius: 0.75rem;
       border: 1px solid var(--hsm-border);
       background: #05060a;
       color: var(--hsm-text);
@@ -125,7 +190,7 @@
     input::placeholder,
     textarea::placeholder {
       color: var(--hsm-text-muted);
-      opacity: 0.8;
+      opacity: 0.85;
     }
 
     input:focus,
@@ -208,7 +273,7 @@
     font-size: 0.75rem;
     color: var(--hsm-text-muted);
     padding: 0.45rem 0.75rem;
-    border-radius: 999px;
+    border-radius: 0.9rem;
     border: 1px dashed var(--hsm-border);
     background: rgba(7, 9, 15, 0.9);
   }
@@ -217,5 +282,24 @@
 @keyframes contact-spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 880px) {
+  .contact-page__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .contact-page__intro {
+    max-width: none;
+  }
+
+  .contact-page__form-wrapper {
+    max-width: none;
   }
 }

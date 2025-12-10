@@ -35,13 +35,24 @@ export class ContactComponent {
 
     this.loading = true;
 
-    // Simulazione invio demo
+    const { name, email, reason, message } = this.form.value;
+
+    // Oggetto e corpo della mail (semplice, ma efficace)
+    const subject = encodeURIComponent(`HSM – Richiesta di contatto (${reason})`);
+    const body = encodeURIComponent(
+      `Nome: ${name}\n` +
+        `Email: ${email}\n` +
+        `Motivo: ${reason}\n\n` +
+        `Messaggio:\n${message}\n`
+    );
+
+    // Apre il client email dell'utente
+    window.location.href = `mailto:irondaryl@proton.me?subject=${subject}&body=${body}`;
+
+    // Finto stato "ok" lato UI
     setTimeout(() => {
       this.loading = false;
       this.success = true;
-
-      // Qui potresti integrare un vero servizio HTTP/email in futuro
-      console.log('Contact demo payload:', this.form.value);
-    }, 800);
+    }, 400);
   }
 }
